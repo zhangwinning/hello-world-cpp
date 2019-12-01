@@ -1,28 +1,27 @@
-//
-// Created by videojj on 2019/11/30.
-//
-
+#define ABCD 4
 #include <iostream>
 
-int main() {
-//    std::cout << "Enter two numbers:" << std::endl;
-//    int v1 = 0, v2 = 0;
-//    std::cin >> v1 >> v2;
-//    std::cout << "The sum of " << v1 << " and " << v2 << " is " << v1 + v2 << std::endl;
-//    return 0;
-//    2、while 语句
-//    int sum = 0, val = 1;
-//    while (val <= 10) {
-//        sum += val;
-//        ++val;
-//    }
-//    std::cout << "Sum of 1 to 10 inclusive is " << sum << std::endl;
-//    return 0;
-//    3、读取数量不定的输入数据
-    int sum = 0, value = 0;
+int fact(int val) {
+    return  -10;
+}
+int main()
+{
 
-    while (std::cin >> value)
-        sum += value;
-    std::cout << "Sum is:" << sum << std::endl;
-    return  0;
+#ifdef ABCD
+    std::cout << "1: yes\n";
+#else
+    std::cout << "1: no\n";
+#endif
+
+#ifndef ABCD
+    std::cout << "2: no1\n";
+#elif ABCD == 2
+    std::cout << "2: yes\n";
+#else
+    std::cout << "2: no2\n";
+#endif
+
+#if !defined(DCBA) && (ABCD < 2*4-3)
+    std::cout << "3: yes\n";
+#endif
 }
